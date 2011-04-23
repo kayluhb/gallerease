@@ -21,7 +21,11 @@
                 $li = $('<li/>');
                 $a = $('<a/>');
                 if(obj.a != null)
-					$a.text(obj.a).attr('href', '#').attr('rel', i).attr('title', obj.a).click(onById);
+                $a.text(obj.a)
+                    .attr('href', '#')
+                    .attr('rel', i)
+                    .attr('title', obj.a)
+                    .click(onById);
                 $li.append($a);
                 $ul.append($li);
             }
@@ -63,9 +67,7 @@
             $a.removeClass('on');
             $a = $nav.find('ul li:nth-child(' + (cur + 1) + ') a')
             $a.addClass('on');
-
             $cap.text($a.attr('title'));
-
         }
         // public methods
 
